@@ -25,7 +25,7 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-	if (switchButton == LOW) {
+	if (digitalRead(switchButton) == LOW) {
 		digitalWrite(builtinLed, HIGH);
 	}
 	else {
