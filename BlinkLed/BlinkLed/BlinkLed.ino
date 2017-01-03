@@ -20,7 +20,7 @@ const int switchButton = 9;
 void setup() {
 	// initialize digital pin 13 as an output & pin 9 as input.
 	pinMode(builtinLed, OUTPUT);
-	pinMode(switchButton, INPUT);
+	pinMode(switchButton, INPUT_PULLUP);
 }
 
 // the loop function runs over and over again forever
