@@ -14,17 +14,21 @@
 */
 
 const int builtinLed = 13;
+const int switchButton = 9;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-  // initialize digital pin 13 as an output.
-  pinMode(builtinLed, OUTPUT);
+	// initialize digital pin 13 as an output & pin 9 as input.
+	pinMode(builtinLed, OUTPUT);
+	pinMode(switchButton, INPUT);
 }
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(builtinLed, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);						// wait for a second
-  digitalWrite(builtinLed, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);						// wait for a second
+	if (switchButton == LOW) {
+		digitalWrite(builtinLed, HIGH);
+	}
+	else {
+		digitalWrite(builtinLed, LOW);
+	}
 }
